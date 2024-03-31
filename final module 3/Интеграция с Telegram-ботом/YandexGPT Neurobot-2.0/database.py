@@ -24,7 +24,7 @@ def execute_selection_query(sql_query, data=None):
         cursor.execute(sql_query, data)
     else:
         cursor.execute(sql_query)
-    rows = cursor.fetchall()
+    rows = cursor.fetchone()
     connection.close()
     return rows
 
@@ -51,6 +51,7 @@ def delete_data(user_id: int):
     execute_query(sql)
 
 
+# Не работает
 def get_all_tokens():
     sql = f'SELECT DISTINCT user_id, session from users;'
     result = execute_selection_query(sql)
@@ -60,11 +61,7 @@ def get_all_tokens():
     return answer
 
 
-
-
-
-
-# # TODO: Подсчёт всех токенов за всё время
+# Не работает
 def get_tokens():
     sql1 = f'SELECT DISTINCT session FROM users ORDER BY date DESC'
     res_session = execute_selection_query(sql1)
@@ -79,8 +76,8 @@ def get_tokens():
 
         print(f'За сессию {ell[0]} было потрачено: {res_count} токенов')
     print(f'Всего потрачено {all_tokens} токенов')
-get_tokens()
 # create_table('users')
+
 
 def get_data_for_user(user_id):
     # TODO: Здесь вам нужно добавить код для выполнения запроса и записи в логи
@@ -89,7 +86,7 @@ def get_data_for_user(user_id):
     answer = []
     for i in result:
         answer.append(i)
-    return answer[0]
+    return answer
 
 
 def get_last_session_id(user_id):

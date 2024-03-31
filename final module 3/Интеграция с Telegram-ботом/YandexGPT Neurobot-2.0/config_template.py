@@ -1,4 +1,4 @@
-IAM_TOKEN = 't1.9euelZqRyM-YjpbGisbMi8aRzciOl-3rnpWamouYnJSKkZ6Zk5Cai5TLlszl8_cfLlxP-e8jW1tH_N3z919cWU_57yNbW0f8zef1656VmszKi42PnMfPkZCVlZPNjpyZ7_zF656VmszKi42PnMfPkZCVlZPNjpyZveuelZrGkMnKl57Ni5Gai52akcqUi7XehpzRnJCSj4qLmtGLmdKckJKPioua0pKai56bnoue0oye.mvmRFibLzLClZvvBVN6YMyzVjA52tkPau371GnAd5noKj_RFqchFkcEQEBMn9ZQ66MpUQ0WtO8sQin8mA2wUAA'
+IAM_TOKEN = 't1.9euelZrKmpyMy5aenZqXns6Ylc-Yx-3rnpWamouYnJSKkZ6Zk5Cai5TLlszl8_dpXFlP-e8fJTs1_N3z9ykLV0_57x8lOzX8zef1656VmpfJz56bl43NicqJx52SzYyQ7_zF656VmpfJz56bl43NicqJx52SzYyQveuelZqRnJTGjs2bz47MmJKelZCVxrXehpzRnJCSj4qLmtGLmdKckJKPioua0pKai56bnoue0oye.EdRuPFXb_zXYycTPiWmbl7u1yRO20UnCatIOkzlSxqq_5d-ZTZsaitB6CApIQyoeNzOpzeM_avDHMXW9bsthCw'
 FOLDER_ID = 'b1gg4891rufkm43he5im'
 GPT_MODEL = 'yandexgpt-lite'
 
@@ -13,4 +13,5 @@ CONTINUE_STORY = 'Продолжи сюжет в 1-3 предложения и �
 END_STORY = 'Напиши завершение истории c неожиданной развязкой.'
 
 # Напиши системный промт, который объяснит нейросети, как правильно писать сценарий вместе с пользователем
-SYSTEM_PROMPT = 'Напиши короткую историю вместе с пользователем.'
+SYSTEM_PROMPT = ('Напиши короткую историю вместе с пользователем. Сначала пишет пользователь, потом ты. Не добавляй '
+                 'никакой пояснительный текст от себя.')
