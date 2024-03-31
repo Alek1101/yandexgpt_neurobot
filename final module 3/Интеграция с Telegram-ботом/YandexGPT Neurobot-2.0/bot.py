@@ -24,6 +24,8 @@ def create_keyboard(options):
     return keyboard
 
 
+
+
 @bot.message_handler(commands=['debug'])
 def debug(m):
     try:

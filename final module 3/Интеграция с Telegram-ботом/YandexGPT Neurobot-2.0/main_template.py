@@ -1,7 +1,7 @@
 import requests
 from config_template import IAM_TOKEN, FOLDER_ID, GPT_MODEL, CONTINUE_STORY, END_STORY, SYSTEM_PROMPT
 from pprint import pprint
-import time
+from time import sleep
 
 
 def do_not_add_users(data: dict):
@@ -102,61 +102,9 @@ def create_system_prompt(data, user_id):
     return prompt
 
 
-# def main(user_id=123321):
-#     print("Привет! Я помогу тебе составить классный сценарий!")
-#     genre = input("Для начала напиши жанр, в котором хочешь составить сценарий: ")
-#     user_id = 123321
-#     # TODO: 'INSERT INTO users (user_id, genre) VALUE (?, ?)'
-#     character = input("Теперь опиши персонажа, который будет главным героем: ")
-#     # TODO: 'INSERT INTO users (user_id, character) VALUE (?, ?)'
-#     setting = input("И последнее. Напиши сеттинг, в котором будет жить главный герой: ")
-#
-#     # Запиши полученную информацию в user_data
-#
-#     user_data = {123321: {
-#         'genre': genre,
-#         'character': character,
-#         'setting': setting
-#     }}
-#
-#     # Запиши системный промт, созданный на основе полученной информации от пользователя, в user_collection
-#
-#     user_collection = {
-#         123321: [
-#             {'role': 'system', 'content': create_system_prompt(user_data, 123321)},
-#
-#         ]
-#     }
-#
-#     user_content = input('Напиши начало истории: \n')
-#     while user_content.lower() != 'end':
-#         # Запиши user_content в user_collection
-#         user_collection[123321].append({'role': 'user', 'content': user_content})
-#         assistant_content = ask_gpt(user_collection[123321])
-#
-#         # Запиши assistant_content в user_collection
-#
-#         print('YandexGPT: ', assistant_content)
-#         user_content = input('Напиши продолжение истории. Чтобы закончить введи end: \n')
-#
-#     assistant_content = ask_gpt(user_collection[user_id], 'end')
-#
-#     # Запиши assistant_content в user_collection
-#     user_collection[123321].append({'role': 'assistant', 'content': assistant_content})
-#
-#     print('\nВот, что у нас получилось:\n')
-#
-#     # Напиши красивый вывод получившейся истории
-#     # print(f'{user_collection=}\n\n{user_data=}')
-#     # print('******----*********')
-#
-#     for one_mess in user_collection[123321]:
-#         print(one_mess['content'])
-#
-#     input('\nКонец... ')
-#
-#
-# if __name__ == "__main__":
-#     main()
-
-# create_new_token()
+def time_token():
+    a = 0
+    while True:
+        a += 1
+        sleep(5)
+        return a
